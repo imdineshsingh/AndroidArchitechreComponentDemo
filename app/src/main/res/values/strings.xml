@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SCHEDULEit</string>
+
+    <string name="action_setting">Settings</string>
+    <string name="new_note">Add Note</string>
+    <string name="save">Save</string>
+    <string name="saved">Note Saved</string>
+    <string name="not_saved">Couldn\'t Save</string>
+
+</resources>

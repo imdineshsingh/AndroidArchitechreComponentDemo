@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="clickListeners"
+            type="com.dinesh.sheduleit.threading.handlerLooperMessageQueue.HandlerExampleActivity.MyButtonClickListeners" />
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".threading.handlerLooperMessageQueue.HandlerExampleActivity">
+
+    <Button
+        android:id="@+id/btnStartThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start Thread"
+        android:onClick="@{(view)->clickListeners.myClickListeners(view)}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.09"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btnStopThread"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Stop Thread"
+        android:onClick="@{(view)->clickListeners.myClickListeners(view)}"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartThread"
+        app:layout_constraintVertical_bias="0.057"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/btnTaskA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view)->clickListeners.myClickListeners(view)}"
+        android:text="Task A"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartThread"
+        app:layout_constraintVertical_bias="0.186"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btnTaskB"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{(view)->clickListeners.myClickListeners(view)}"
+        android:text="Task B"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnStartThread"
+        app:layout_constraintVertical_bias="0.353"
+        tools:layout_editor_absoluteX="-16dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
