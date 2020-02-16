@@ -105,6 +105,7 @@
             app:layout_constraintTop_toBottomOf="@+id/btnRoom"
             app:layout_constraintVertical_bias="0.052" />
 
+
         <Button
             android:id="@+id/btnHandler"
             android:layout_width="match_parent"
@@ -117,7 +118,21 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnThreding"
-            app:layout_constraintVertical_bias="0.061" />
+            app:layout_constraintVertical_bias="0.105" />
+
+        <Button
+            android:id="@+id/btnMultipleImageSelection"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> clickListener.onClick(view)}"
+            android:text="Gallery Multiple Image Selection"
+
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHandler"
+            app:layout_constraintVertical_bias="0.276" />
 
         <TextView
             android:id="@+id/textView"
@@ -127,23 +142,23 @@
             android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.242"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnHandler"
-            app:layout_constraintVertical_bias="0.112" />
+            app:layout_constraintVertical_bias="0.556" />
 
         <EditText
             android:id="@+id/editText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="25sp"
             android:hint="enter text"
+            android:textSize="25sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
-            app:layout_constraintVertical_bias="0.235" />
+            app:layout_constraintVertical_bias="0.793" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

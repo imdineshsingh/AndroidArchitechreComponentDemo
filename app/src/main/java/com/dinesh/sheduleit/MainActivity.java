@@ -9,6 +9,7 @@ import android.util.Log;
 import android.view.View;
 
 import com.dinesh.sheduleit.databinding.ActivityMainBinding;
+import com.dinesh.sheduleit.galleryMultipleImagePick.GalleryActivity;
 import com.dinesh.sheduleit.lifecycle.LifecycleActivity;
 import com.dinesh.sheduleit.livedata.LiveDataActivity;
 import com.dinesh.sheduleit.room.NotesActivity;
@@ -70,7 +71,11 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
                     startActivity(new Intent(getApplicationContext(), HandlerExampleActivity.class));
                     break;
 
-                    default:break;
+                case R.id.btnMultipleImageSelection:
+                    startActivity(new Intent(getApplicationContext(), GalleryActivity.class));
+                    break;
+
+                default:break;
             }
 
         }
