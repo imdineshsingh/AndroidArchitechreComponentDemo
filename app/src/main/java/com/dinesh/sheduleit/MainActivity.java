@@ -12,7 +12,10 @@ import com.dinesh.sheduleit.databinding.ActivityMainBinding;
 import com.dinesh.sheduleit.galleryMultipleImagePick.GalleryActivity;
 import com.dinesh.sheduleit.lifecycle.LifecycleActivity;
 import com.dinesh.sheduleit.livedata.LiveDataActivity;
+import com.dinesh.sheduleit.parcelable.ParcelableActivity;
+import com.dinesh.sheduleit.readNotification.NotificationReaderActivity;
 import com.dinesh.sheduleit.room.NotesActivity;
+import com.dinesh.sheduleit.sqlite.SQLiteDbActivity;
 import com.dinesh.sheduleit.test.MyInterface;
 import com.dinesh.sheduleit.test.TestInterfacesActivity;
 import com.dinesh.sheduleit.threading.MyThreadActivity;
@@ -73,6 +76,17 @@ public class MainActivity extends AppCompatActivity implements MyInterface {
 
                 case R.id.btnMultipleImageSelection:
                     startActivity(new Intent(getApplicationContext(), GalleryActivity.class));
+                    break;
+                case R.id.btnParcelable:
+                    startActivity(new Intent(getApplicationContext(), ParcelableActivity.class));
+                    break;
+
+                case R.id.btnSqliteDb:
+                    startActivity(new Intent(getApplicationContext(), SQLiteDbActivity.class));
+                    break;
+
+                case R.id.btnNotificationReader:
+                    startActivity(new Intent(getApplicationContext(), NotificationReaderActivity.class));
                     break;
 
                 default:break;

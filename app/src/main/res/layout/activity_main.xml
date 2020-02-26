@@ -8,27 +8,33 @@
             type="com.dinesh.sheduleit.MainActivity.MainActivityClickListner" />
 
     </data>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    >
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        tools:context=".lifecycle.LifecycleActivity">
+        tools:context=".lifecycle.LifecycleActivity"
+        >
+
 
         <Button
             android:id="@+id/btnLifecycle"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
 
             android:onClick="@{(view) -> clickListener.onClick(view)}"
+
             android:text="lifecycle"
 
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.052"
+            app:layout_constraintEnd_toEndOf="@id/btnViewModel"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.045" />
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <Button
@@ -44,7 +50,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLiveData"
-            app:layout_constraintVertical_bias="0.012" />
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnLiveData"
@@ -59,8 +65,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnLifecycle"
-            app:layout_constraintVertical_bias="0.014" />
-
+            app:layout_constraintVertical_bias="0.0" />
 
         <Button
             android:id="@+id/btnTestInterface"
@@ -74,7 +79,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnViewModel"
-            app:layout_constraintVertical_bias="0.032" />
+            app:layout_constraintVertical_bias="0.0" />
+
 
         <Button
             android:id="@+id/btnRoom"
@@ -88,7 +94,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnTestInterface"
-            app:layout_constraintVertical_bias="0.046" />
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <Button
@@ -103,7 +109,7 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnRoom"
-            app:layout_constraintVertical_bias="0.052" />
+            app:layout_constraintVertical_bias="0.0" />
 
 
         <Button
@@ -118,7 +124,8 @@
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnThreding"
-            app:layout_constraintVertical_bias="0.105" />
+            app:layout_constraintVertical_bias="0.0" />
+
 
         <Button
             android:id="@+id/btnMultipleImageSelection"
@@ -127,12 +134,54 @@
             android:onClick="@{(view) -> clickListener.onClick(view)}"
             android:text="Gallery Multiple Image Selection"
 
-            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintBottom_toTopOf="@+id/btnParcelable"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btnHandler"
-            app:layout_constraintVertical_bias="0.276" />
+            app:layout_constraintVertical_bias="0.2" />
+
+        <Button
+            android:id="@+id/btnParcelable"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> clickListener.onClick(view)}"
+            android:text="Parcelable"
+
+            app:layout_constraintBottom_toTopOf="@+id/btnSqliteDb"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMultipleImageSelection"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btnSqliteDb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> clickListener.onClick(view)}"
+            android:text="SqliteDB "
+
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnMultipleImageSelection"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/btnNotificationReader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="@{(view) -> clickListener.onClick(view)}"
+            android:text="Notifation reader "
+
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSqliteDb"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
             android:id="@+id/textView"
@@ -144,7 +193,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/btnHandler"
+            app:layout_constraintTop_toBottomOf="@+id/btnSqliteDb"
             app:layout_constraintVertical_bias="0.556" />
 
         <EditText
@@ -161,5 +210,8 @@
             app:layout_constraintVertical_bias="0.793" />
 
 
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>
 </layout>

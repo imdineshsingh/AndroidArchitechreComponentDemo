@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -12,7 +11,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".galleryMultipleImagePick.GalleryActivity"></activity>
+        <activity android:name=".readNotification.NotificationReaderActivity"></activity>
+        <activity android:name=".sqlite.SQLiteDbActivity" />
+        <activity android:name=".parcelable.ShowParcelableDataActivity" />
+        <activity android:name=".parcelable.ParcelableActivity" />
+        <activity android:name=".galleryMultipleImagePick.GalleryActivity" />
         <activity android:name=".threading.handlerLooperMessageQueue.HandlerExampleActivity" />
         <activity android:name=".threading.MyThreadActivity" />
         <activity android:name=".room.NewNoteActivity" />
@@ -28,9 +31,7 @@
         <activity android:name=".viewModel.ViewModelActivity" />
         <activity android:name=".livedata.LiveDataActivity" />
         <activity android:name=".room.NotesActivity" />
-
-
-            <!--For MultiplaimageSelection-->
+        <!-- For MultiplaimageSelection -->
         <provider
             android:name="androidx.core.content.FileProvider"
             android:authorities="com.dinesh.sheduleit.imagepickersheetdemo.fileprovider"
@@ -38,9 +39,17 @@
             android:grantUriPermissions="true">
             <meta-data
                 android:name="android.support.FILE_PROVIDER_PATHS"
-                android:resource="@xml/file_paths"/>
+                android:resource="@xml/file_paths" />
         </provider>
-
+        <!-- for reading notification -->
+        <service
+            android:name=".readNotification.NotificationService"
+            android:label="@string/service_name"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE">
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
     </application>
 
 </manifest>
